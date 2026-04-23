@@ -1,14 +1,8 @@
 // Vercel Serverless Function
-// Guarda tokens de export em memória (funciona para baixo volume)
-// Para produção com muitos usuários, use Vercel KV (Redis)
+// Guarda tokens de export em memória
 
-import type { VercelRequest, VercelResponse } from '@vercel/node'
-
-// Store em memória — persiste enquanto a função estiver quente
-// Tokens expiram em 10 minutos
 const tokens = new Map<string, { ready: boolean; createdAt: number }>()
-
-const TTL = 10 * 60 * 1000 // 10 minutos
+const TTL = 10 * 60 * 1000
 
 function cleanup() {
   const now = Date.now()
@@ -17,35 +11,24 @@ function cleanup() {
   }
 }
 
-export default function handler(req: VercelRequest, res: VercelResponse) {
+export default function handler(req: { method: string; query: Record<string, string>; body: Record<string, string> }, res: { status: (n: number) => { json: (d: unknown) => void; end: () => void } }) {
   cleanup()
 
-  // CORS para o app Electron
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+  res.status(200) // CORS headers set via vercel.json
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end()
-  }
+  const token = req.query?.token || req.body?.token
 
-  const token = (req.query.token as string) || (req.body?.token as string)
-
-  if (!token) {
-    return res.status(400).json({ error: 'token required' })
-  }
+  if (!token) return res.status(400).json({ error: 'token required' })
 
   if (req.method === 'POST') {
-    // Marca token como pronto (usuário assistiu o anúncio)
     tokens.set(token, { ready: true, createdAt: Date.now() })
     return res.status(200).json({ ok: true })
   }
 
   if (req.method === 'GET') {
-    // App desktop verifica se pode exportar
     const entry = tokens.get(token)
     if (entry?.ready) {
-      tokens.delete(token) // usa uma vez só
+      tokens.delete(token)
       return res.status(200).json({ ready: true })
     }
     return res.status(200).json({ ready: false })
