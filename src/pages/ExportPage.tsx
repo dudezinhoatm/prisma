@@ -35,7 +35,7 @@ export default function ExportPage() {
     script.id = 'adsense-script'
     script.async = true
     // SUBSTITUA pelo seu ID do AdSense
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX'
+    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1214849919595378'
     script.crossOrigin = 'anonymous'
     document.head.appendChild(script)
   }, [])
@@ -91,7 +91,7 @@ export default function ExportPage() {
         <ins
           className="adsbygoogle"
           style={{ display: 'block', width: '100%', height: '250px' }}
-          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+          data-ad-client="ca-pub-1214849919595378"
           data-ad-slot="XXXXXXXXXX"
           data-ad-format="auto"
           data-full-width-responsive="true"
