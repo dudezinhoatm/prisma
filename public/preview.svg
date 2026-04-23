@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0d0d0f"/>
+  <!-- Menu bar -->
+  <rect width="1280" height="36" fill="#13131a"/>
+  <rect y="35" width="1280" height="1" fill="#2a2a35"/>
+  <circle cx="20" cy="18" r="5" fill="#9b6dff" opacity="0.8"/>
+  <rect x="36" y="11" width="80" height="14" rx="3" fill="#1a1a20"/>
+  <rect x="124" y="11" width="50" height="14" rx="3" fill="#1a1a20"/>
+  <rect x="182" y="11" width="90" height="14" rx="3" fill="#1a1a20"/>
+  <rect x="280" y="11" width="50" height="14" rx="3" fill="#1a1a20"/>
+  <!-- Toolbar left -->
+  <rect width="130" height="684" x="0" y="36" fill="#13131a"/>
+  <rect x="130" y="36" width="1" height="684" fill="#2a2a35"/>
+  <rect x="10" y="50" width="110" height="28" rx="4" fill="rgba(155,109,255,0.15)" stroke="#9b6dff" stroke-width="1"/>
+  <rect x="10" y="84" width="110" height="28" rx="4" fill="transparent"/>
+  <rect x="10" y="118" width="110" height="28" rx="4" fill="transparent"/>
+  <rect x="10" y="152" width="110" height="28" rx="4" fill="transparent"/>
+  <rect x="10" y="186" width="110" height="28" rx="4" fill="transparent"/>
+  <!-- Project panel -->
+  <rect x="131" width="260" height="684" y="36" fill="#1a1a20"/>
+  <rect x="391" y="36" width="1" height="684" fill="#2a2a35"/>
+  <rect x="131" y="36" width="260" height="32" fill="#13131a"/>
+  <rect x="131" y="68" width="260" height="32" fill="#13131a"/>
+  <rect x="131" y="36" width="130" height="32" fill="rgba(155,109,255,0.12)" rx="0"/>
+  <rect x="131" y="66" width="1280" height="1" fill="#2a2a35"/>
+  <!-- Asset grid -->
+  <rect x="145" y="110" width="80" height="70" rx="6" fill="#9b6dff"/>
+  <rect x="235" y="110" width="80" height="70" rx="6" fill="#1a1a20" stroke="#2a2a35" stroke-width="1"/>
+  <rect x="325" y="110" width="50" height="70" rx="6" fill="#1a1a20" stroke="#2a2a35" stroke-width="1"/>
+  <!-- Viewer center -->
+  <rect x="392" width="636" height="520" y="36" fill="#0d0d0f"/>
+  <!-- Comp tabs -->
+  <rect x="392" y="36" width="636" height="32" fill="#1a1a20"/>
+  <rect x="392" y="36" width="120" height="32" fill="#0d0d0f"/>
+  <rect x="392" y="66" width="120" height="2" fill="#9b6dff"/>
+  <!-- Canvas -->
+  <rect x="430" y="100" width="560" height="360" rx="2" fill="#0a0a0f" stroke="#2a2a35" stroke-width="1"/>
+  <text x="710" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="32" font-weight="700" fill="#e0e0e0">Motion Studio</text>
+  <rect x="530" y="300" width="120" height="80" rx="4" fill="rgba(155,109,255,0.4)" stroke="#9b6dff" stroke-width="1.5"/>
+  <rect x="680" y="290" width="160" height="100" fill="rgba(107,63,160,0.5)" stroke="#7c5cbf" stroke-width="1"/>
+  <!-- Bottom bar viewer -->
+  <rect x="392" y="488" width="636" height="40" fill="#13131a"/>
+  <rect x="392" y="487" width="636" height="1" fill="#2a2a35"/>
+  <!-- Properties panel -->
+  <rect x="1028" width="252" height="684" y="36" fill="#1a1a20"/>
+  <rect x="1028" y="36" width="252" height="32" fill="#13131a"/>
+  <rect x="1028" y="68" width="252" height="32" fill="#13131a"/>
+  <rect x="1028" y="36" width="1" height="684" fill="#2a2a35"/>
+  <!-- Prop rows -->
+  <rect x="1040" y="115" width="228" height="28" rx="3" fill="#16161e"/>
+  <rect x="1040" y="149" width="228" height="28" rx="3" fill="#16161e"/>
+  <rect x="1040" y="183" width="228" height="28" rx="3" fill="#16161e"/>
+  <rect x="1040" y="217" width="228" height="28" rx="3" fill="#16161e"/>
+  <!-- Timeline -->
+  <rect y="556" width="1280" height="164" fill="#080809"/>
+  <rect y="556" width="1280" height="1" fill="#2a2a35"/>
+  <!-- Transport -->
+  <rect y="556" width="1280" height="40" fill="#13131a"/>
+  <rect y="595" width="1280" height="1" fill="#2a2a35"/>
+  <circle cx="60" cy="576" r="14" fill="#9b6dff"/>
+  <!-- Ruler -->
+  <rect y="596" x="240" width="1040" height="36" fill="#1a1a20"/>
+  <rect y="631" width="1280" height="1" fill="#2a2a35"/>
+  <!-- Layer bars -->
+  <rect y="632" x="0" width="240" height="32" fill="#13131a"/>
+  <rect y="664" x="0" width="240" height="32" fill="#13131a"/>
+  <rect y="632" x="240" width="600" height="32" fill="transparent"/>
+  <rect y="636" x="240" width="580" height="24" rx="3" fill="#6b3fa0" stroke="#9b6dff" stroke-width="1.5"/>
+  <rect y="668" x="360" width="400" height="24" rx="3" fill="#5c3a8a" stroke="#7c5cbf" stroke-width="1"/>
+  <!-- Playhead -->
+  <rect y="596" x="439" width="2" height="124" fill="#9b6dff"/>
+  <polygon points="439,596 449,596 444,604" fill="#9b6dff"/>
+</svg>
